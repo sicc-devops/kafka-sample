@@ -30,7 +30,7 @@ public class UserListener {
     	
     	try {
     		
-    		int insert = userService.insertUser(user);
+    		//int insert = userService.insertUser(user);
     		
 	    } catch(Exception e) {
 	    	logger.info("context", e);

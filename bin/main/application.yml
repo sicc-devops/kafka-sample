@@ -16,20 +16,20 @@ spring:
           content-type: application/json
           group: relay          
 
-#  datasource:
-#    driverClassName: org.postgresql.Driver
-#    url: jdbc:postgresql://34.70.212.240:5432/postgres?currentSchema=sicc
-#    username: postgres
-#    password: qwe123!!
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://34.70.212.240:5432/postgres?currentSchema=sicc
+    username: postgres
+    password: qwe123!!
         
-#mybatis: 
-#  type-aliases-package: com.sicc.stream.domain
-#  mapper-locations: classpath*:mapper/**/*.xml
-#  configuration: 
-#    cache-enabled: true
-#    lazy-loading-enabled: true
-#    map-underscore-to-camel-case: false
-#    default-fetch-size: 100
-#    default-statement-timeout: 30
-#    auto-mapping-unknown-column-behavior: FAILING  
+mybatis: 
+  type-aliases-package: com.sicc.stream.domain
+  mapper-locations: classpath*:mapper/**/*.xml
+  configuration: 
+    cache-enabled: true
+    lazy-loading-enabled: true
+    map-underscore-to-camel-case: false
+    default-fetch-size: 100
+    default-statement-timeout: 30
+    auto-mapping-unknown-column-behavior: FAILING  
 
