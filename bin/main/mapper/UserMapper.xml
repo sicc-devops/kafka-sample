@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sicc.stream.mapper.UserMapper">
+
+
+    <select id="selectUser" resultType="UserVO" parameterType="String">
+    	SELECT
+    		user_id as userId,
+    		user_name as userName,
+    		passwd,
+    		reg_date as regDt
+    	FROM
+    	 	sicc.user
+    	WHERE
+    	 	user_id = #{UserId}
+    </select>
+
+	<insert id="insertUser" parameterType="UserVO">
+		INSERT INTO
+			sicc.user (user_id, passwd, user_name, reg_date)
+		VALUES
+			(
+				#{userId},
+				#{passwd},
+				#{userName},
+				#{regDt}
+			)	 
+	</insert>
+	
+	<delete id="deleteUser" parameterType="String">
+		DELETE FROM
+			sicc.user
+		WHERE 
+			user_id = #{UserId} 
+	</delete>
+</mapper>
