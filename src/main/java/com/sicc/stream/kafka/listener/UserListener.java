@@ -31,6 +31,7 @@ public class UserListener {
     	try {
     		
     		//int insert = userService.insertUser(user);
+    		logger.info("kafka received: "+ user.toStringJson());
     		
 	    } catch(Exception e) {
 	    	logger.info("context", e);
