@@ -90,8 +90,8 @@ kind: HorizontalPodAutoscaler
 metadata:
   name: ${APP_NAME}-hpa             # HorizontalPodAutoscaler object 자신의 고유 정보를 입력
 spec:                               # HorizontalPodAutoscaler object가 수행하는 내용에 대한 설정   
-  maxReplicas: 8                    # 업스케일 시 생성할 수 있는 Pod의 최대수   
-  minReplicas: 4                    # 다운스케일 시 생성할 수 있는 Pod의 최소수   
+  maxReplicas: 4                    # 업스케일 시 생성할 수 있는 Pod의 최대수   
+  minReplicas: 2                    # 다운스케일 시 생성할 수 있는 Pod의 최소수   
   scaleTargetRef:                   # HorizontalPodAutoscaler object가 동작할 대상에 대한 설정   
     apiVersion: apps/v1          
     kind: Deployment                  
